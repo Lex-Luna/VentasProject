@@ -17,6 +17,8 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+//Necesario para habilitar CORS
+app.UseCors("MyAllowSpecificOrigins");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
